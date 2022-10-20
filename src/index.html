@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Currency Exchanger</title>
+</head>
+<body>
+ <div class="conatiner"> 
+  <h1>Exchange Rate Calculator</h1>
+  <p>Enter the amount you want to exchange and then select the currency youi like to exchange it to</p>
+  <form id="input">
+    <label for ="enterDollar">Enter an amount in Dollars</label>
+    <input id = "dollarInput", type="number" name="dollarInput">
+    <label for ="currencySelection">Choose currency to convert to</label>
+    <select name=" currencySelection" id="currencySelection">
+      <option value="">Select the Currency</option>
+      <option value="AED">UAE Dirham</option>
+      <option value="AFN">Afghan Afghani</option>
+      <option value="ALL">Albanian Lek</option>
+      <option value="AMD">Armenian Dram</option>
+      <option value="ANG">Netherlands Antillian Guilder</option>
+    </select>
+    <button type ="submit" class="btn-change">Convert</button>
+    </form>
+    <p id="showResults"></p>
+</div>
+</body>
+</html>
