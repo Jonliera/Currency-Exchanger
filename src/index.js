@@ -1,25 +1,21 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-//  import CurrencyExchangeService from './currency-service.js';
+import CurrencyService from './currency-service.js';
 
-// //  Business Logic
+//Business Logic
 
-// function GetCurrency()  {
-//     let promise = CurrencyService.getExchange();
-//     promise.then(function(currencyDataArray) {
-//         printElemnts(currencyDataArray);
-//     },function(errorArray) {
-//         printError(errorArray);
-//     });
-//     }
-//   let promise = GifService.getGif(searchResult);
-//   promise.then(function(gifDataArray) {
-//     printElements(gifDataArray);
-//   }, function(errorArray) {
-//     printError(errorArray);
-//   });
-// }
+function GetCurrency(dollarInput, currencySelection) {
+    CurrencyService.getExchange()
+    .then(function(response) {
+        if(response.conversion_rates[currencySelection]) {
+        printElements(response,dollarInput,currencySelection);
+        } else{
+            printError(response,dollarInput,currencySelection)
+        }
+    });
+}
+
 
 // //UI Logic
 

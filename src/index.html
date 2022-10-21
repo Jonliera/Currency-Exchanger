@@ -4,12 +4,13 @@
   <title>Currency Exchanger</title>
 </head>
 <body>
+  <img src ="img/goat2.jpeg" alt="an image of a goat">
  <div class="conatiner"> 
   <h1>Exchange Rate Calculator</h1>
   <p>Enter the amount you want to exchange and then select the currency youi like to exchange it to</p>
   <form id="input">
     <label for ="enterDollar">Enter an amount in Dollars</label>
-    <input id = "dollarInput", type="number" name="dollarInput">
+    <input id = "dollarInput" type="number" name="dollarInput" placeholder="0" value="1">
     <label for ="currencySelection">Choose currency to convert to</label>
     <select name=" currencySelection" id="currencySelection">
       <option value="">Select the Currency</option>
@@ -18,7 +19,7 @@
       <option value="ALL">Albanian Lek</option>
       <option value="AMD">Armenian Dram</option>
       <option value="ANG">Netherlands Antillian Guilder</option>
-    </select>
+    </select><br>
     <button type ="submit" class="btn-change">Convert</button>
     </form>
     <p id="showResults"></p>
