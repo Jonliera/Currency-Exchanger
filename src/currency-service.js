@@ -2,10 +2,12 @@ export default class CurrencyService {
     static getExchange() {
         return fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`)
         .then(function(response) {
-            // console.log(responses);
             if (!response.ok) {
-                const errorMessage = `${response.status} ${response.statusText}`;
+                return resoponse.json()
+                .then(function(apiErrorMessage){
+                const errorMessage = `${response.status} ${response.statusText}${apiErrorMessage}`;
                 throw new Error(errorMessage);
+                });
             } else {
                 return response.json();
             }
@@ -15,21 +17,3 @@ export default class CurrencyService {
         });
     }
 }    
-   
-
-//     return new Promise(function(resolve,reject) {
-//       let request = new XMLHttpRequest();
-//       const url = https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD
-//       request.addEventListener("loadend", function()  {
-//         const response = JSON.parse(this.responseText);
-//         if  (this.status === 200) {
-//           resolve([response, searchResult]);
-//         } else  {
-//           reject([this, response, searchResult]);
-//         }
-//       });
-//       request.open("GET", url, true);
-//       request.send();
-//     });
-//   }
-// }
