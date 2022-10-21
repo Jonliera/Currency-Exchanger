@@ -5,7 +5,7 @@ export default class CurrencyService {
             if (!response.ok) {
                 return resoponse.json()
                 .then(function(apiErrorMessage){
-                const errorMessage = `${response.status} ${response.statusText}${apiErrorMessage}`;
+                const errorMessage = `${response.status} ${response.statusText}${apiErrorMessage['error-type']}`;
                 throw new Error(errorMessage);
                 });
             } else {
