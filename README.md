@@ -1,6 +1,6 @@
-# _Template Repo_
+# _Currency Exchanger_
 
-#### _Template to create projects using an enviroment with multiple packages managed by npm, and webpack to bundle our source code._ 
+#### _The user imputs an amount in Dollars and converts it to the selected currency._ 
 
 #### By_** Jonathan Liera**_
 
@@ -9,20 +9,25 @@
 * _Javascript_
 * _HTML_
 * _CSS_
-* _eslint_
-* _jest_
+* _Eslint_
+* _Webpack_
+* _Node_
+* 
 
 
 ## Description
+
+#### _Using javascript this app calls an exchange rate API. The user will input a dollar amount and tll have option to convert it to any other currency they want to exchange to. 
+
 
 ## Setup/Installation Requirements
 
 * _Clone this repository to your desktop_
 * _Install all packages with $ npm install_
-* _Build the project using webpack with $ npm run build_
+* _Go to https://app.exchangerate-api.com/sign-up and create an account_
+* _Get an API KEY_
 * _Start a development server with $ npm run start_
-* _Lint JS files in the src folder with $ npm run lint_
-* _Run tests with Jest using $ npm run test_
+
 
 ## Known Bugs
 
